@@ -1,4 +1,4 @@
-function [Gbest_val,fit_record,diversity_position]=CEC_LDPSO(fhd,MaxFES,N,D,Xmax,Xmin,varargin)
+function [Gbest_val,fit_record,diversity_position]=CEC_LDPSO(fhd,MaxFES,N,D,Xmax,Xmin,elite_max,elite_min,Jump,alpha,varargin)
 rand('state',sum(100*clock));
 Vmax = Xmax/2;
 Vmin = -Vmax;
@@ -18,10 +18,6 @@ Pbest = X;
 Pbest_val = fitness;
 Gbest_val = best_fitness;
 iter=0;
-elite_max=0.4;
-elite_min=0.1;
-Jump=10;
-alpha=0.1;
 Record=zeros(1,N);
 while fitcount<MaxFES
     w=0.9-0.5*fitcount/MaxFES;
