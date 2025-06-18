@@ -1,5 +1,5 @@
 # LDPSO
-The code for Leaders-Driven Particle Swarm Optimizer (ESWA,2025)
+The code for Leaders-Driven Particle Swarm Optimizer (DOI: 10.1016/j.eswa.2025.128595)
 
 
 Notes.
